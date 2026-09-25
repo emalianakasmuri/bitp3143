@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/Users/emalianakasmuri/workspace-bitp3143/bitp3143/.metadata/.plugins/org.eclipse.jdt.core
+964812483.index
+1865797976.index
+3741646290.index

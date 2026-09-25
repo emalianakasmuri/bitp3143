@@ -1,0 +1,35 @@
+package demorgan;
+
+/**
+ * Program 1.1: Truth table for Java's logical operators,
+ * with a check of De Morgan's laws.
+ */
+public class TruthTable {
+	
+    public static void main(String[] args) {
+    	
+        // The only two values a boolean can take; we loop over both
+        boolean[] values = {false, true};
+
+        // Column headings for the table
+        System.out.println("A       B       A&&B    A||B    A^B     !A      DeMorgan1   DeMorgan2");
+
+        // Two nested loops visit all 2 x 2 = 4 combinations of A and B
+        for (boolean a : values) {
+            
+        	for (boolean b : values) {
+                
+            	// De Morgan's first law: !(A AND B) equals (!A OR !B)
+                boolean dm1 = !(a && b) == (!a || !b);
+                
+                // De Morgan's second law: !(A OR B) equals (!A AND !B)
+                boolean dm2 = !(a || b) == (!a && !b);
+
+                // Print one row: the inputs, each operator's result,
+                // and whether both laws hold (always true if the laws are correct)
+                System.out.printf("%-7b %-7b %-7b %-7b %-7b %-7b %-11b %b%n",
+                        a, b, a && b, a || b, a ^ b, !a, dm1, dm2);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+# Compiled Java
+*.class
+
+# Common build output folders
+bin/
+build/
+target/
+out/
+
+# Packaged files (optional)
+*.jar
+*.war
+*.ear
