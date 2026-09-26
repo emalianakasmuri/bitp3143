@@ -1,3 +1,9 @@
+# Eclipse workspace
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+Servers/
+
 # Eclipse project files
 .settings/
 .classpath
