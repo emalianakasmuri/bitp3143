@@ -37,5 +37,7 @@ public class TransitCardDemo {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());   // print the reason for rejection
         }
+        
+        System.out.println("\nProgram ends.");
     }
 }
