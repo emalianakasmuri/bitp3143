@@ -1,22 +1,23 @@
 package notification;
 
 /**
- * Program 1.11e: LowCouplingDemo.java
+ * This program  sends the same payment confirmation first by SMS and then by 
+ * WhatsApp,using one PaymentNotifier class that never changes.
  *
- * Program description:
- *   Sends the same payment confirmation first by SMS and then by WhatsApp,
- *   using one PaymentNotifier class that never changes.
- *
- * What it shows:
+ * The program demonstrate the following:-
+ * 
  *   - Low coupling: PaymentNotifier works with any MessageSender.
  *   - A new channel is added by writing one new class, with no change to
  *     existing code.
- *
+ *     
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public class LowCouplingDemo {
 	
 	/**
      * Main entry point to the program.
+     * 
      * Creates a notifier for each channel and sends the same confirmation.
      */
     public static void main(String[] args) {

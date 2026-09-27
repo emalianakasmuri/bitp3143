@@ -1,13 +1,12 @@
 package utilityapp;
 
 /**
- * Program 1.5: Iteration over tiered (block) pricing.
- * 
- * Program description:
- *   Calculates the monthly electricity bill for three households using
- *   tiered (block) pricing, where each additional block of kWh costs more.
- *   For each household it prints the charge for every block used and the total.
- *
+ * This program calculates the monthly electricity bill for three households 
+ * using tiered (block) pricing, where each additional block of kWh costs more.
+ * For each household it prints the charge for every block used and the total.
+ *   
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 
 public class TieredBill {
@@ -17,7 +16,8 @@ public class TieredBill {
     static final double[] BLOCK_RATE = {0.22, 0.33, 0.52, 0.55};
     
     /**
-     * This method Calculates one household's bill by charging its usage block by block.
+     * This method Calculates one household's bill by charging its usage block 
+     * by block.
      * Prints the charge for each block used and returns the total in RM.
      *
      * @param usageKwh electricity used in the month, in kWh
@@ -34,7 +34,8 @@ public class TieredBill {
         // Visit the blocks in order
         for (int i = 0; i < BLOCK_SIZE.length; i++) {
             
-        	// All usage has been charged, so the remaining blocks are not needed
+        	// All usage has been charged, so the remaining blocks are not 
+        	// needed
             if (remaining <= 0) {
             	
             	// nothing left to charge

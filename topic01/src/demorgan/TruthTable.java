@@ -1,8 +1,11 @@
 package demorgan;
 
 /**
- * Program 1.1: Truth table for Java's logical operators,
- * with a check of De Morgan's laws.
+ * This class produce truth table for Java's logical operators, with a check 
+ * of De Morgan's laws.
+ * 
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development
  */
 public class TruthTable {
 	
@@ -12,7 +15,8 @@ public class TruthTable {
         boolean[] values = {false, true};
 
         // Column headings for the table
-        System.out.println("A       B       A&&B    A||B    A^B     !A      DeMorgan1   DeMorgan2");
+        System.out.println("A       B       A&&B    A||B    A^B     !A      "
+        		+ "DeMorgan1   DeMorgan2");
 
         // Two nested loops visit all 2 x 2 = 4 combinations of A and B
         for (boolean a : values) {

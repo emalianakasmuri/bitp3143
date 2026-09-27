@@ -1,17 +1,17 @@
 package notification;
 
 /**
- * Program 1.11c: WhatsAppSender.java
- *
- * Class description:
- *   A MessageSender that delivers messages by WhatsApp. For this example the
- *   delivery is simulated by printing the message to the console.
+ * This class is MessageSender that simulates the Whatsapp delivery messages by 
+ * by printing the message to the console.
+ *   
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development     
  */
 public class WhatsAppSender implements MessageSender {
 
 	
 	/**
-     * Sends the message by WhatsApp (simulated).
+     * This method simulates the WhatsApp message sending process.
      *
      * @param to   the recipient's phone number
      * @param text the message to deliver

@@ -1,14 +1,13 @@
 package utilityapp;
 
 /**
- * Program 1.6: SolarPayback.java
- *
- * Program description:
- *   Models three tasks for a home rooftop solar system: working out how many
- *   years the bill savings take to cover the installation cost, connecting to
- *   the solar inverter with retries, and averaging daily energy readings while
- *   ignoring faulty ones.
- *
+ * This program models three tasks for a home rooftop solar system: working out 
+ * how many years the bill savings take to cover the installation cost, 
+ * connecting to the solar inverter with retries, and averaging daily energy 
+ * readings while ignoring faulty ones.
+ *   
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 
 public class SolarPayback {
@@ -24,7 +23,7 @@ public class SolarPayback {
         
     	
     	double yearlySaving = firstYearSaving;
-        double cumulative = 0.0;     // total saved so far
+        double cumulative = 0.0;     
         int year = 0;
 
         // while: we do not know in advance how many years it will take
@@ -67,7 +66,8 @@ public class SolarPayback {
     }
 
     /**
-     * Averages daily energy readings, skipping faulty values (zero or below).
+     * This method averages daily energy readings, skipping faulty values 
+     * (zero or below).
      */
     static void averageValidReadings(double[] dailyKwh) {
         
@@ -86,17 +86,21 @@ public class SolarPayback {
             valid++;
         }
         
-        System.out.printf("\nAverage of %d valid days: %.2f kWh%n", valid, sum / valid);
+        System.out.printf("\nAverage of %d valid days: %.2f kWh%n", 
+        		valid, sum / valid);
     }
 
     /**
-     * Main entry point of the program that runs the three solar tasks with sample figures.
+     * Main entry point of the program 
+     * 
+     * It runs the three solar tasks with sample figures.
      */
     public static void main(String[] args) {
     	
     	System.out.println("A demonstration of solar payback\n");
         
-    	// RM18,000 system, RM3,000 saved in year 1, bills +3%/year, panels -0.5%/year
+    	// RM18,000 system, RM3,000 saved in year 1, bills +3%/year, 
+    	// panels -0.5%/year
         int year = paybackYear(18000.00, 3000.00, 0.03, 0.005);
         System.out.println("Payback reached in year " + year + "\n");
 

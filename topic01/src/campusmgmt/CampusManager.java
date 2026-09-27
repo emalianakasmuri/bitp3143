@@ -1,8 +1,12 @@
 package campusmgmt;
 
 /**
- * Program 1.10: A class with LOW cohesion (an example of what to avoid).
- * Three unrelated jobs share one class, and each job uses its own fields.
+ * This class demonstrate LOW cohesion (an example of what to avoid), where 
+ * three unrelated jobs share one class, and each job uses its own fields.
+ * 
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development
+ * 
  */
 public class CampusManager {
 

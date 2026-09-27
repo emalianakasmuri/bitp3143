@@ -4,19 +4,18 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
- * Program 1.12c: IndependentTasks.java
+ * This program analyses six hours of rainfall from four  rain gauges. It 
+ * totals the rain at each station, finds the wettest station, and builds a 
+ * running (cumulative) total for that station.
  *
- * Program description:
- *   Analyses six hours of rainfall from four hypothetical rain gauges. It
- *   totals the rain at each station, finds the wettest station, and builds a
- *   running (cumulative) total for that station.
- *
- * What it shows:
+ * The program demonstrate the following:-
  *   - Task A (station totals): independent tasks that could run in parallel.
  *   - Task B (wettest station): a reduction that needs all of Task A's results.
- *   - Task C (cumulative rainfall): a loop-carried dependency that must run in order.
- *   - A preview of Topic 8: running Task A in parallel gives the same answer.
+ *   - Task C (cumulative rainfall): a loop-carried dependency that must run in 
+ *   order.
  *
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public class IndependentTasks {
 
@@ -33,7 +32,8 @@ public class IndependentTasks {
         	
         	// each iteration writes its own slot
             totals[index] = RainfallAnalyzer.getStationTotal(index);   
-            System.out.printf("%-17s total %6.1f mm%n", stations[index], totals[index]);
+            System.out.printf("%-17s total %6.1f mm%n", stations[index], 
+            		totals[index]);
         }
 
         // Task B: a reduction over all of Task A's results
@@ -41,16 +41,17 @@ public class IndependentTasks {
         System.out.println("Wettest station: " + stations[wettest]);
 
         // Task C: must run hour by hour, in order
-        double[] cumulative = RainfallAnalyzer.cumulative(wettest);
+        double[] cumulative = RainfallAnalyzer.getCumulative(wettest);
         System.out.println("Cumulative at " + stations[wettest] + ": "
                 + Arrays.toString(cumulative));
 
-        // Preview of Topic 8: Task A run in parallel gives the same answer.
+        // Task A run in parallel gives the same answer.
         // parallel() lets Java share the stations among the available cores.
         double[] parallelTotals = IntStream.range(0, stations.length)
-                                           .parallel()
-                                           .mapToDouble(RainfallAnalyzer::stationTotal)
-                                           .toArray();
+        		.parallel()
+        		.mapToDouble(RainfallAnalyzer::getStationTotal)
+        		.toArray();
+        
         System.out.println("Parallel Task A matches sequential? "
                 + Arrays.equals(totals, parallelTotals));
     }

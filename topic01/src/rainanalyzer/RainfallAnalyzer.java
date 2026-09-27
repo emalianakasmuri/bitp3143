@@ -1,19 +1,19 @@
 package rainanalyzer;
 
 /**
- * Program 1.12b: RainfallAnalyzer.java
- *
- * Class description (analysis):
- *   Provides the three rainfall tasks, each showing a different pattern:
+ * The class provides the three rainfall tasks as follows:-
  *   - Task A, stationTotal(): independent work that could run in parallel.
  *   - Task B, wettestStation(): a reduction that needs all of Task A's results.
  *   - Task C, cumulative(): a loop-carried dependency that must run in order.
+ *
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public class RainfallAnalyzer {
 
     /**
-     * Task A: Get total rainfall for ONE station.
-     * This method reads only that station's row and writes nothing shared,
+     * This method represents Task A where it gets a total rainfall for 
+     * ONE station.  It reads only that station's row and writes nothing shared,
      * which is why different stations can be processed at the same time.
      *
      * @param station the station's index
@@ -30,7 +30,7 @@ public class RainfallAnalyzer {
     }
 
     /**
-     * Task B: This method finds the wettest station. 
+     * This method represents Task B, where it finds the wettest station. 
      * Needs ALL results of Task A (a reduction).
      *
      * @param totals the total rainfall of every station
@@ -50,13 +50,15 @@ public class RainfallAnalyzer {
     }
 
     /**
-     * Task C: This method running (cumulative) rainfall at one station.
+     * This method represents Task C: The task running (cumulative) rainfall at 
+     * one station.
+     * 
      * Loop-carried dependency: hour h needs the result of hour h-1.
      *
      * @param station the station's index
      * @return cumulative rainfall after each hour, in mm
      */
-    public static double[] cumulative(int station) {
+    public static double[] getCumulative(int station) {
     	
         double[] result = new double[RainfallData.RAIN[station].length];
         

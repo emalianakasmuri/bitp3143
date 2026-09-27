@@ -1,19 +1,17 @@
 package transitapp;
 
 /**
-* Program 1.9a: TransitCard.java
-* 
-* Class description:
-*   TransitCard holds a card number and a balance, with methods to top up,
-*   check entry, pay a fare and read the balance.
+* This class holds a card number and a balance, with methods to top up, 
+* check entry, pay a fare and read the balance.
 *
-* What it shows:
+* The class demonstrate the following:-
 *   - High cohesion: every field and method serves one job, managing the
 *     card's stored value, and every method works on the same field, balance.
 *   - Encapsulation: balance is private and can only change through the
 *     rules in topUp() and payFare().
 *
-*
+* @author Emaliana Kasmuri FTMK
+* for BITP 3143 Distributed and Parallel Application Development   
 */
 public class TransitCard {
 
@@ -47,7 +45,8 @@ public class TransitCard {
     */
    public void topUp(double amount) {
 	   
-       // Reject a zero or negative amount, or one that exceeds the maximum value
+       // Reject a zero or negative amount, or one that exceeds the maximum 
+	   // value
        if (amount <= 0 || balance + amount > MAX_BALANCE) {
            throw new IllegalArgumentException("Top-up rejected: RM" + amount);
        }
@@ -72,10 +71,13 @@ public class TransitCard {
     * @throws IllegalStateException if the balance cannot cover the fare
     */
    public void payFare(double fare) {
-       // Never let the balance go negative
+       
+	   // Never let the balance go negative
        if (fare > balance) {
-           throw new IllegalStateException("Insufficient balance for fare RM" + fare);
+           throw new IllegalStateException("Insufficient balance for fare RM" +
+        		   fare);
        }
+       
        balance -= fare;
    }
 
@@ -85,7 +87,8 @@ public class TransitCard {
     * @return the balance in RM
     */
    public double getBalance() {
-       return balance;
+       
+	   return balance;
    }
 
    /**
@@ -94,6 +97,7 @@ public class TransitCard {
     */
    @Override
    public String toString() {
-       return String.format("Card %s: RM%.2f", cardNo, balance);
+       
+	   return String.format("Card %s: RM%.2f", cardNo, balance);
    }
 }

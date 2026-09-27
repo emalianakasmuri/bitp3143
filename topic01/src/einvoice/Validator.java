@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Program 1.8c: Validator.java
- *
- * Class description (validation module):
- *   Decides whether an invoice is acceptable and lists any problems found.
- *
+ * This class represents a validation module, that decides whether an invoice is 
+ * acceptable and lists any problems found.
+ * 
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development 
  */
 public class Validator {
 

@@ -1,11 +1,11 @@
 package gradingapp;
 
 /**
- * Program 1.4: GradeReport.java
+ * This program converts the marks of four students into letter grades and 
+ * prints a short report with a remark for each student.
  *
- * Program description:
- *   Converts the marks of four students into letter grades and prints a
- *   short report with a remark for each student.
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development    
  */
 
 public class GradeReport {

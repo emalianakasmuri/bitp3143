@@ -1,13 +1,12 @@
 package einvoice;
 
 /**
- * Program 1.8d: TaxCalculator.java
+ * This class represents a calculation module.  It works out how much is owed 
+ * on an invoice: net amount, tax and gross total.
  *
- * Class description (calculation module):
- *   Works out how much is owed on an invoice: net amount, tax and gross total.
- *
- * Note: the tax rate is illustrative.
- */
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development  
+ * */
 public class TaxCalculator {
 
     private static final double TAX_RATE = 0.08;   
@@ -20,7 +19,7 @@ public class TaxCalculator {
         double total = 0;
         
         for (LineItem item : inv.items()) 
-        	total += item.subtotal();
+        	total += item.calcuateSubtotal();
         
         return total;
     }

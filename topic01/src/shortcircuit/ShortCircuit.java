@@ -1,12 +1,13 @@
 package shortcircuit;
 
 /**
- * Program 1.3: ShortCircuit.java
- *
- * Demonstrates short-circuit evaluation using a simple e-wallet payment check.
- * The program evaluates the same condition, "wallet is active AND balance is
- * enough", in two ways and then performs a null-safe promo-code check.
- *
+ * This program demonstrates short-circuit evaluation using a simple e-wallet 
+ * payment check.  It evaluates the same condition, "wallet is active AND 
+ * balance is enough", in two ways and then performs a null-safe promo-code 
+ * check.
+ * 
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public class ShortCircuit {
 
@@ -16,11 +17,19 @@ public class ShortCircuit {
     // A condition with a visible side effect: it prints a message
     // and increases the counter every time it is evaluated
     static boolean hasBalance(double balance, double amount) {
+    	
         checks++;
+        
         System.out.println("  -> hasBalance() called");
+        
         return balance >= amount;
     }
 
+    /**
+     * Main entry point if the program
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
     	
     	System.out.println("Sample output from ShortCircuit.java\n");

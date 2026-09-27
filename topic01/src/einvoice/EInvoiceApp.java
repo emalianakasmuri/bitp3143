@@ -3,24 +3,26 @@ package einvoice;
 import java.util.List;
 
 /**
- * Program 1.8f: EInvoiceApp.java
+ * This program validates a small set of e-invoices and, for each valid one, 
+ * calculates the net amount, tax and gross total. Invalid invoices are 
+ * rejected with a list of the problems found.
  *
- * Program description:
- *   Validates a small set of e-invoices and, for each valid one, calculates the
- *   net amount, tax and gross total. Invalid invoices are rejected with a list
- *   of the problems found.
- *
- * What it shows:
+ * The program demonstrate the following:-
  *   - Modular design: each class has one responsibility (data, validation,
  *     calculation, presentation), and main() only coordinates them.
  *   - Information hiding: private details such as the TIN rule and tax rate
  *     can change without affecting the other classes.
  *
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development
  */
 public class EInvoiceApp {
 
     /**
-     * Builds three test invoices, then validates, calculates and reports each one.
+     * Program main entry point
+     * 
+     * It builds three test invoices, then validates, calculates and reports 
+     * each one.
      * main() coordinates the modules and contains no business rules.
      */
     public static void main(String[] args) {

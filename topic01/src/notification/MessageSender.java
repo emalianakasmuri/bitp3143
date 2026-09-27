@@ -1,12 +1,14 @@
 package notification;
 
-/**
- * Program 1.11a: MessageSender.java
- *
- * Interface description:
- *   The contract for any channel that can deliver a text message.
- *   PaymentNotifier depends only on this interface, never on a concrete
- *   channel, which keeps the coupling between them low.
+/** *
+ * This interface define contract for any channel that can deliver a text 
+ * message.
+ * 
+ * The PaymentNotifier class depends only on this interface, never on a concrete
+ * channel, which keeps the coupling between them low.
+ *   
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public interface MessageSender {
 

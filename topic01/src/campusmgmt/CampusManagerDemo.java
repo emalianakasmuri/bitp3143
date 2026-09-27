@@ -1,16 +1,35 @@
 package campusmgmt;
 
+/**
+ * This class coordinates low cohesion implementation
+ * 
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development
+ */
 public class CampusManagerDemo {
 	
+	/**
+	 * Main entry point of the application
+	 * @param args
+	 */
 	public static void main(String[] args) {
-        CampusManager m = new CampusManager();
-        m.addMark(78); m.addMark(64); m.addMark(91);
-        m.recordOffence(); m.recordOffence();
-        m.recordSale(8.50); m.recordSale(12.00);
+		
+		// Invoking unrelated operation
+        CampusManager campusManager = new CampusManager();
+        campusManager.addMark(78); 
+        campusManager.addMark(64); 
+        campusManager.addMark(91);
+        
+        campusManager.recordOffence(); 
+        campusManager.recordOffence();
+        
+        campusManager.recordSale(8.50); 
+        campusManager.recordSale(12.00);
 
-        System.out.printf("Average mark : %.2f%n", m.averageMark());
-        System.out.printf("Parking fines: RM%.2f%n", m.totalFines());
-        System.out.printf("Cafe sales   : RM%.2f%n", m.salesToday());
+        // Displaying output
+        System.out.printf("Average mark : %.2f%n", campusManager.averageMark());
+        System.out.printf("Parking fines: RM%.2f%n", campusManager.totalFines());
+        System.out.printf("Cafe sales   : RM%.2f%n", campusManager.salesToday());
     }
 
 

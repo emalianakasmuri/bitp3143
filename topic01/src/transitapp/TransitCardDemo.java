@@ -1,23 +1,26 @@
 package transitapp;
 
 /**
- * Program 1.9b: TransitCardDemo.java
- *
- * Program description:
- *   Uses the TransitCard class to simulate a passenger's day:
- *   one trip, a top-up, and an invalid top-up that is rejected.
- *
+ * This program uses the TransitCard class to simulate a passenger's day:
+ * one trip, a top-up, and an invalid top-up that is rejected.
+ *   
+ * @author Emaliana Kasmuri FTMK
+ * for BITP 3143 Distributed and Parallel Application Development   
  */
 public class TransitCardDemo {
 
     /**
+     * Main entry point of the program
+     * 
      * Creates a card and demonstrates a trip, a top-up and a rejected top-up.
      */
     public static void main(String[] args) {
     	
     	System.out.println("TransitCard demonstration: A day of a passanger\n");
+    	
     	// Issue a new card with RM5.00 on it
         TransitCard card = new TransitCard("MY-0042", 5.00);
+        
         // uses TransitCard.toString()
         System.out.println("Initial State -> " + card);                 
 
@@ -34,8 +37,10 @@ public class TransitCardDemo {
         // An amount above the cap is rejected; the balance stays unchanged
         try {
             card.topUp(2000.00);
+            
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());   // print the reason for rejection
+        	
+            System.out.println(e.getMessage());   
         }
         
         System.out.println("\nProgram ends.");
