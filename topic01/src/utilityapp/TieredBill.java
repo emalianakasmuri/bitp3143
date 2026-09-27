@@ -63,6 +63,8 @@ public class TieredBill {
      */
     public static void main(String[] args) {
     	
+    	System.out.println("Sample of utility charges by block\n");
+    	
     	// Sample household usage data
         int[] households = {150, 450, 820};
         
@@ -71,6 +73,8 @@ public class TieredBill {
             System.out.println("Usage " + usage + " kWh:");
             System.out.printf("  Total = RM%.2f%n%n", bill(usage));
         }
+        
+        System.out.println("\nProgram ends");
     }
 }
 
