@@ -45,5 +45,7 @@ public class EInvoiceApp {
         for (Invoice inv : batch) {
         	reportGenerator.print(inv, validator.validate(inv), calc);
         }
+        
+        System.out.println("\n\nProgram ends.");
     }
 }
