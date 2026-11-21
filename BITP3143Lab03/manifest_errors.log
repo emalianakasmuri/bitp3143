@@ -1,0 +1,5 @@
+Line 4: expected 4 fields but found 3 -> KH100003,MLK,JHR
+Line 5: unknown destination hub PNG -> KH100004,MLK,PNG,2.0
+Line 6: weight is not a number: abc -> KH100005,MLK,JHR,abc
+Line 7: weight must be above 0 and at most 30 kg, not -3.5 -> KH100006,MLK,KUL,-3.5
+Line 9: weight must be above 0 and at most 30 kg, not 30.5 -> KH100008,MLK,KUL,30.5

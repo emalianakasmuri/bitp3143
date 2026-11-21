@@ -14,6 +14,7 @@ public class CampusManagerDemo {
 	 */
 	public static void main(String[] args) {
 		
+		
 		// Invoking unrelated operation
         CampusManager campusManager = new CampusManager();
         campusManager.addMark(78); 
