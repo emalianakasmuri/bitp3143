@@ -7,7 +7,7 @@ import topic08.program82.PrimeUtil;
 /** 
  * Program 8.6 (part 3): 
  * This class represent a task that counts the number of prime number in the 
- * array.ß 
+ * array.
  * 
  * @author Emaliana Kasmuri, FTMK UTeM
  * for BITP 3143 Distributed and Parallel Application Development
