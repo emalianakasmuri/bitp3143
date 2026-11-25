@@ -1,0 +1,3 @@
+ERROR record 2: invalid amount in 'W1002,abc'
+ERROR record 4: missing wallet ID in ',15.00'
+SUMMARY processed=5 ok=3 failed=2

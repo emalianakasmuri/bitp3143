@@ -1,0 +1,7 @@
+KOPI CORNER PRICE LIST
+D01  Kopi O               RM   2.50
+D02  Teh Tarik            RM   2.80
+N01  Mee Goreng           RM   6.50
+N02  Kuey Teow Sup        RM   7.00
+T01  Roti Bakar Kaya      RM   3.50
+T02  Telur Separuh Masak  RM   3.00
